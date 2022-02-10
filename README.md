@@ -86,6 +86,14 @@ Python autotimer.py
 
 As you can see the file contains alot of data that might be problematic for later steps. There for its important that we clean our file by removing the unneeded data and only leaving for each activity the line with the name and the line with the time in minutes.
 
+As an example you can check the file I used after sorting by clicking this link: 
+
+[activities.json](./core/activities.json)
+
+<br>
+
+-- --
+
 **JSON to Excel** 
 
 ![05_timer.png](./media/05_timer.png) 
@@ -153,11 +161,21 @@ Python json_excel.py
 
 3.) Open the json_excel.py file and paste the content.
 
-4.) Go to the file path in the terminal.
+4.) Look for this line 
+```
+json2excel = Json2Excel(head_name_cols=["rank", "name"])
+```
+and delete the world rank from brackets.
+
+4.) Go to the file path in the terminal using your web browser or file explorer.
 
 **Output** 
 
 The output should be an excel file contatining the name of your activities and the time each activity took in minutes.
+
+As an example you can check the file I was able to create by following the past steps by clicking this link: 
+
+[daily_report.xlsx](./core/daily_report.xlsx)
 
 
 
